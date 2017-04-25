@@ -34,7 +34,7 @@ func (bdb *BoltdbStore) Set(topic string, when time.Time, data []byte) error {
 	})
 }
 
-func (bdb *BoltdbStore) GetLatest(window time.Duration) (time.Time, error) {
+func (bdb *BoltdbStore) GetLatest() (time.Time, error) {
 	var ret time.Time
 	bdb.View(func(tx *bolt.Tx) error {
 		c := tx.Bucket([]byte(bucketName)).Cursor()

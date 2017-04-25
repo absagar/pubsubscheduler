@@ -4,7 +4,6 @@ import (
 	"cloud.google.com/go/pubsub"
 	"encoding/json"
 	"time"
-	"bitbucket.org/testbookdotcom/tpubsub"
 	"golang.org/x/net/context"
 	"os"
 	"log"
@@ -53,7 +52,7 @@ func Publish(topic string, when time.Time, data []byte, attr map[string]string) 
 		}
 	} else {
 		//publish to scheduler topic
-		t = pubSubClient.Topic(tpubsub.PUBSUB_TOPIC_SCHEDULE)
+		t = pubSubClient.Topic(PUBSUB_TOPIC_SCHEDULE)
 		bts, err := json.Marshal(SchedulerPayload{
 			Topic: topic,
 			Data:  data,

@@ -1,8 +1,7 @@
 # pubsubscheduler
 Provides future scheduling built over Google's pubsub.
 
-[Pub/Sub](https://cloud.google.com/pubsub/) is a fully managed realtime messaging service. This package provides functionality above google's pubsub of future scheduling of messages.
-Useful for cases when you have to build a functionality which happens in future. For example - send a reminder for an event which is going to happen in future.
+[Pub/Sub](https://cloud.google.com/pubsub/) is a fully managed realtime messaging service. This package provides functionality of future scheduling of messages built over google's pubsub. For example - send a reminder for an event which is going to happen in future.
 
 How it works?
 -------------
